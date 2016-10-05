@@ -9,6 +9,7 @@ public class Libro {
 		// TODO Auto-generated constructor stub
 		nombre = "N/A";
 		autor = "N/A";
+		condicion = "N/A";
 	}
 	
 }

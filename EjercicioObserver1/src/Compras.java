@@ -4,7 +4,7 @@ public class Compras implements Observer {
 	@Override
 	public void notificar(Libro libroANotificar) {
 		// TODO Auto-generated method stub
-		System.out.println("compras");
+		System.out.println("Se notifica a compras que el libro es viejo.");
 	}
 
 	@Override

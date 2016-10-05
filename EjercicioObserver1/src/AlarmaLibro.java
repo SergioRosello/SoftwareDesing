@@ -16,6 +16,7 @@ public class AlarmaLibro {
 	
 	public void notificarObservers(Libro libroRoto){
 		for(Observer observer : observers){
+			System.out.println("Compruebo...");
 			observer.notificar(libroRoto);
 		}
 	}
