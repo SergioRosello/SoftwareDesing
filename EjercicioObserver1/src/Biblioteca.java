@@ -9,6 +9,8 @@ public class Biblioteca {
 		this.alarma = alarma;
 	}
 	
+	//Falta este método: 
+	//notifica a alarma libro si el libro está mal. 
 	public void comprobarLibro(){
 		
 	}
