@@ -25,6 +25,7 @@ public class Biblioteca {
 		
 		AlarmaLibro alarma = new AlarmaLibro();
 		Libro libro = new Libro();
+		Libro otroLibro = new Libro();
 		Biblioteca biblioteca = new Biblioteca(alarma);
 		
 		Observer miObserver = new Stock();
@@ -36,6 +37,14 @@ public class Biblioteca {
 		alarma.subscribirse(miTercerObserver);
 
 		libro.condicion = "Viejo";
+		libro.autor = "Roberto Rrías";
+		libro.nombre = "Introducción al Rage";
+		
+		otroLibro.condicion  ="Nuevo";
+		otroLibro.autor = "Sergio Roselló";
+		otroLibro.nombre = "Introducción a los gadjets";
+		
 		biblioteca.comprobarLibro(libro);
+		biblioteca.comprobarLibro(otroLibro);
 	}
 }
