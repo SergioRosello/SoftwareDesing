@@ -10,10 +10,7 @@ public class Biblioteca {
 		
 		this.alarma = alarma;
 	}
-	
-
-	//Falta este método: 
-	//notifica a alarma libro si el libro está mal. 
+	 
 	public void comprobarLibro(Libro libro){
 		if (libro.condicion == "Viejo"){
 			System.out.println("El libro es viejo");
@@ -23,16 +20,14 @@ public class Biblioteca {
 		else System.out.println("El libro no tiene estado.");
 	}
 
-	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		
+
 		AlarmaLibro alarma = new AlarmaLibro();
 		Libro libro = new Libro();
-		Libro otroLibro = new Libro();
 		Biblioteca biblioteca = new Biblioteca(alarma);
-		
+
 		Observer miObserver = new Stock();
 		Observer miSegundoObserver = new Administracion();
 		Observer miTercerObserver = new Compras();
@@ -44,13 +39,8 @@ public class Biblioteca {
 		libro.condicion = "Viejo";
 		libro.autor = "Roberto Rrías";
 		libro.nombre = "Introducción al Rage";
-		
-		otroLibro.condicion  ="Nuevo";
-		otroLibro.autor = "Sergio Roselló";
-		otroLibro.nombre = "Introducción a los gadjets";
-		
+
 		biblioteca.comprobarLibro(libro);
-		biblioteca.comprobarLibro(otroLibro);
 	}
 
 }
