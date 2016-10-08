@@ -1,6 +1,7 @@
 import java.util.Observer;
 
 public class Biblioteca {
+
 	
 	AlarmaLibro alarma;
 	
@@ -13,7 +14,7 @@ public class Biblioteca {
 	public void comprobarLibro(Libro libro){
 		if (libro.condicion == "Viejo"){
 			System.out.println("El libro es viejo");
-			alarma.notifyObservers(libro);
+			alarma.notifyObservers();
 		}
 		else if (libro.condicion == "Nuevo") System.out.println("El libro está nuevo.");
 		else System.out.println("El libro no tiene estado.");
@@ -21,23 +22,14 @@ public class Biblioteca {
 
 	public static void main(String[] args) {
 		
-		AlarmaLibro alarma = new AlarmaLibro();
 		Libro libro = new Libro();
-		Biblioteca biblioteca = new Biblioteca(alarma);
-
-		Observer miObserver = new Stock();
-		Observer miSegundoObserver = new Administracion();
-		Observer miTercerObserver = new Compras();
-
-		alarma.addObserver(miObserver);
-		alarma.addObserver(miSegundoObserver);
-		alarma.addObserver(miTercerObserver);
-
-		libro.condicion = "Viejo";
-		libro.autor = "Roberto Rrías";
-		libro.nombre = "Introducción al Rage";
-
-		biblioteca.comprobarLibro(libro);
+		AlarmaLibro alarma = new AlarmaLibro();
+				
+		Administracion administracion = new Administracion(alarma);
+		//Compras compras = new Compras(alarma);
+		//Stock stock = new Stock(alarma);
+		
+		alarma.inicializarLibro(libro);
 	}
 
 }
