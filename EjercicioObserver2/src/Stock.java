@@ -6,7 +6,8 @@ public class Stock implements Observer {
 	@Override
 	public void update(Observable o, Object arg) {
 		// TODO Auto-generated method stub
-
+		System.out.println("Se notifica a Stock que el estado del libro es viejo");
+		displayInfo((Libro) arg);
 	}
 	
 	public void displayInfo(Libro libroAMostrar) {
