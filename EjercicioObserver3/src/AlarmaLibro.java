@@ -15,7 +15,7 @@ public class AlarmaLibro extends Observable{
 	public void notifyObservers() {
 		// TODO Auto-generated method stub
 		super.setChanged();
-		super.notifyObservers();	
+		super.notifyObservers(libro);
 	}
 	
 	public Libro getLibro(){
