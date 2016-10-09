@@ -1,7 +1,7 @@
 import java.util.Observable;
 
 public class AlarmaLibro extends Observable{
-	Libro libro = new Libro();
+	private Libro libro = new Libro();
 	public AlarmaLibro(){	}
 	
 	public void inicializarLibro(Libro libro){
@@ -16,6 +16,10 @@ public class AlarmaLibro extends Observable{
 		// TODO Auto-generated method stub
 		super.setChanged();
 		super.notifyObservers();	
+	}
+	
+	public Libro getLibro(){
+		return this.libro;
 	}
 	
 }

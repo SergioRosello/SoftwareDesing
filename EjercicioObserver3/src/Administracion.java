@@ -4,7 +4,7 @@ import java.util.Observer;
 public class Administracion implements Observer {
 	
 	Observable observable;
-	private Libro libro;
+	private Libro libro = new Libro();
 	
 
 	public Administracion(Observable observable) {
@@ -18,9 +18,9 @@ public class Administracion implements Observer {
 		System.out.println("Se notifica a Administracion que el estado del libro es viejo");
 		if(o instanceof AlarmaLibro){
 			AlarmaLibro alarmaLibro = (AlarmaLibro)o;
-			this.libro.nombre = alarmaLibro.libro.nombre;
-			this.libro.autor = alarmaLibro.libro.autor;
-			this.libro.condicion = alarmaLibro.libro.condicion;
+			this.libro.nombre = alarmaLibro.getLibro().nombre;
+			this.libro.autor = alarmaLibro.getLibro().autor;
+			this.libro.condicion = alarmaLibro.getLibro().condicion;
 			displayInfo((Libro) arg);
 		}
 	}
