@@ -18,18 +18,16 @@ public class Administracion implements Observer {
 		System.out.println("Se notifica a Administracion que el estado del libro es viejo");
 		if(o instanceof AlarmaLibro){
 			AlarmaLibro alarmaLibro = (AlarmaLibro)o;
-			this.libro.nombre = alarmaLibro.getLibro().nombre;
-			this.libro.autor = alarmaLibro.getLibro().autor;
-			this.libro.condicion = alarmaLibro.getLibro().condicion;
-			displayInfo((Libro) arg);
+			this.libro = alarmaLibro.getLibro();
+			displayInfo();
 		}
 	}
 	
-	public void displayInfo(Libro libroAMostrar) {
+	public void displayInfo() {
 		// TODO Auto-generated method stub
-		System.out.println("Titulo: " + libroAMostrar.nombre);
-		System.out.println("Autor: " + libroAMostrar.autor);
-		System.out.println("Estado: " + libroAMostrar.condicion);
+		System.out.println("Titulo: " + libro.nombre);
+		System.out.println("Autor: " + libro.autor);
+		System.out.println("Estado: " + libro.condicion);
 	}
 
 }

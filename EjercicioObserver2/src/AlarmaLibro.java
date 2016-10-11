@@ -6,11 +6,11 @@ public class AlarmaLibro extends Observable{
 		
 	}
 	
-	@Override
-	public void notifyObservers(Object arg) {
+	public void notificarObservadores(Object arg) {
 		// TODO Auto-generated method stub
-		super.setChanged();
-		super.notifyObservers(arg);
+		setChanged();
+		notifyObservers(arg);
 	}
+	
 
 }

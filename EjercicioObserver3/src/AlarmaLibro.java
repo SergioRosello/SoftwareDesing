@@ -8,14 +8,13 @@ public class AlarmaLibro extends Observable{
 		this.libro.autor = libro.autor;
 		this.libro.nombre = libro.nombre;
 		this.libro.condicion = libro.condicion;
-		notifyObservers();
+		notificarObservadores();
 	}
 	
-	@Override
-	public void notifyObservers() {
+	public void notificarObservadores() {
 		// TODO Auto-generated method stub
-		super.setChanged();
-		super.notifyObservers(libro);
+		setChanged();
+		notifyObservers();
 	}
 	
 	public Libro getLibro(){
