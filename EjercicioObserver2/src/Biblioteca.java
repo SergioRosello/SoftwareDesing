@@ -13,7 +13,7 @@ public class Biblioteca {
 	public void comprobarLibro(Libro libro){
 		if (libro.condicion == "Viejo"){
 			System.out.println("El libro es viejo");
-			alarma.notifyObservers(libro);
+			alarma.notificarObservadores(libro);
 		}
 		else if (libro.condicion == "Nuevo") System.out.println("El libro está nuevo.");
 		else System.out.println("El libro no tiene estado.");
