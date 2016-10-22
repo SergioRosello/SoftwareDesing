@@ -22,4 +22,10 @@ public class Libro extends Recompensas {
 		return this.titulo;
 	}
 
+	@Override
+	public Niño removeRecompensa() {
+		// TODO Auto-generated method stub
+		return niño;
+	}
+	
 }

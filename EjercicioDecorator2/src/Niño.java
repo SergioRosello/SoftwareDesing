@@ -7,4 +7,6 @@ public abstract class Niño {
 	}
 	
 	public abstract String getTitulo();
+	
+	public abstract Niño removeRecompensa();
 }

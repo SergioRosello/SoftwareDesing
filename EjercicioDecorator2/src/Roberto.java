@@ -11,4 +11,10 @@ public class Roberto extends Niño {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public Niño removeRecompensa() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

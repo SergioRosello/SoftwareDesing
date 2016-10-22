@@ -12,4 +12,10 @@ public class Certificado extends Recompensas {
 	protected String getDescription(){
 		return niño.getDescription() + ", un certificado";
 	}
+	
+	@Override
+	public Niño removeRecompensa() {
+		// TODO Auto-generated method stub
+		return niño;
+	}
 }

@@ -11,5 +11,11 @@ public class Libro extends Recompensas {
 	protected String getDescription() {
 		return niño.getDescription() + ", un libro";
 	}
+	
+	@Override
+	public Niño removeRecompensa() {
+		// TODO Auto-generated method stub
+		return niño;
+	}
 
 }

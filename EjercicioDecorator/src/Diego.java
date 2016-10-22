@@ -5,4 +5,10 @@ public class Diego extends Niño {
 		// TODO Auto-generated constructor stub
 		description = "Diego. ";
 	}
+	
+	@Override
+	public Niño removeRecompensa() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

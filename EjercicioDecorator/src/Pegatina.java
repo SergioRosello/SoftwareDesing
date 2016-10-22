@@ -11,4 +11,10 @@ public class Pegatina extends Recompensas {
 		return niño.getDescription() + " Tengo una pegatina";
 		
 	}
+	
+	@Override
+	public Niño removeRecompensa() {
+		// TODO Auto-generated method stub
+		return niño;
+	}
 }

@@ -19,4 +19,9 @@ public class Certificado extends Recompensas {
 		return null;
 	}
 	
+	@Override
+	public Niño removeRecompensa() {
+		// TODO Auto-generated method stub
+		return niño;
+	}
 }

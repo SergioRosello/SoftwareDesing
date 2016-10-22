@@ -16,4 +16,10 @@ public class Pegatina extends Recompensas {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	@Override
+	public Niño removeRecompensa() {
+		// TODO Auto-generated method stub
+		return niño;
+	}
 }
