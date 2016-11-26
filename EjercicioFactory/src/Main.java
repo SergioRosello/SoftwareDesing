@@ -3,13 +3,14 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		TransistorFactory NPNfactory = new NPNTransistorFactory();
+		TransistorFactory PNPfactory = new PNPTransistorFactory();
 
-		WidgetFactory windowsFactory = new WindowsWidgetFactory();
-		WidgetStore store = new WidgetStore(windowsFactory);
-		store.createWidget();
+		Transistor transistor = NPNfactory.encargo(5);
+		transistor = NPNfactory.encargo(12);
 		
-		store.setWidgetStore(new MacWidgetFactory());
-		store.createWidget();
+		transistor = PNPfactory.encargo(5);
+		transistor = PNPfactory.encargo(12);
 	}
-		
+
 }
