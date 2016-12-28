@@ -1,13 +1,11 @@
 
 
-public class Fuerte extends StatsDecorator{
+public class Attack extends Action {
 
 	@Override
-	int cantidad() {
+	int quantity() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
-	
 
 }

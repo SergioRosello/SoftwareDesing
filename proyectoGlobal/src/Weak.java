@@ -1,9 +1,8 @@
 
-
-public class Defensa extends Accion {
-
+public class Weak extends StatsDecorator {
+	
 	@Override
-	int cantidad() {
+	int quantity() {
 		// TODO Auto-generated method stub
 		return 0;
 	}

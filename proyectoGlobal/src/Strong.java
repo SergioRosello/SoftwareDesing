@@ -1,10 +1,13 @@
 
-public class Debil extends StatsDecorator {
-	
+
+public class Strong extends StatsDecorator{
+
 	@Override
-	int cantidad() {
+	int quantity() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	
 
 }

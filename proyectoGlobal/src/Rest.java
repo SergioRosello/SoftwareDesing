@@ -1,9 +1,9 @@
 
 
-public class Descanso extends Accion{
+public class Rest extends Action{
 
 	@Override
-	int cantidad() {
+	int quantity() {
 		// TODO Auto-generated method stub
 		return 0;
 	}

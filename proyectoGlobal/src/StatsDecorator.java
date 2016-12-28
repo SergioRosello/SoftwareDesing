@@ -1,8 +1,8 @@
 
 
-public abstract class StatsDecorator extends Accion {
+public abstract class StatsDecorator extends Action {
 
 	@Override
-	abstract int cantidad();
+	abstract int quantity();
 
 }
