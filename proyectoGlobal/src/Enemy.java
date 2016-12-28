@@ -1,6 +1,4 @@
 
-
-public abstract class Enemy extends Character{
+public abstract interface Enemy extends Character{
 	
-	Strategy strategy;
 }

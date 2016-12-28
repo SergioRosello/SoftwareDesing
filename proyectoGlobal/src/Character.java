@@ -1,5 +1,4 @@
 
-public abstract class Character {
+public abstract interface Character {
 
-	int lives;
 }

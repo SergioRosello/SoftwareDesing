@@ -8,6 +8,12 @@ public class Strong extends StatsDecorator{
 		return 0;
 	}
 
+	@Override
+	void action() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 
 }

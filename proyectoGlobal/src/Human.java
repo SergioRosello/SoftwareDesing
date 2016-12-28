@@ -1,4 +1,3 @@
-public class Human extends Enemy {
-
-	Strategy strategy;
+public abstract interface Human extends Enemy {
+	
 }

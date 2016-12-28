@@ -1,11 +1,17 @@
 
 
-public class Rest extends Action{
+public class Rest extends EnemyAction{
 
 	@Override
 	int quantity() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	void action() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -1,4 +1,3 @@
-public class Orc extends Enemy {
+public abstract interface Orc extends Enemy {
 
-	Strategy strategy;
 }

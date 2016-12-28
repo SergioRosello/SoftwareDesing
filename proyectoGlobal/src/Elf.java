@@ -1,6 +1,3 @@
+public abstract interface Elf extends Enemy {
 
-
-public class Elf extends Enemy {
-
-	Strategy strategy;
 }

@@ -1,7 +1,4 @@
 
-
-public class Player  extends Character{
-
-	Action action;
+public class Player implements Character{
 	
 }
