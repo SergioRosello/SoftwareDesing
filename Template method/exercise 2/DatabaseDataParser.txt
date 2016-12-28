@@ -1,0 +1,10 @@
+public class DatabaseDataParser() extends DataParser{
+	
+	void readData(){
+		
+	}
+	
+	void processData(){
+		
+	}
+}

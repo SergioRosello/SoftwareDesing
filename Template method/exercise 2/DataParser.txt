@@ -1,0 +1,12 @@
+public abstract class DataParser(){
+	final public void parseDataAndGenerateOutput(){
+		readData();
+		processData();
+		writeData();
+	};
+	abstract void readData();
+	abstract void processData();
+	final public void writeData(){
+		system.out.println("Data written");
+	};
+}
