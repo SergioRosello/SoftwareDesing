@@ -1,5 +1,5 @@
 package enemies;
-public class SwampElf implements Elf {
+public class SwampElf extends Elf {
 	public SwampElf() {
 		
 	}

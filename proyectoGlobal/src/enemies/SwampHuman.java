@@ -1,6 +1,6 @@
 package enemies;
 
-public class SwampHuman implements Human {
+public class SwampHuman extends Human {
 	public SwampHuman() {
 
 	}

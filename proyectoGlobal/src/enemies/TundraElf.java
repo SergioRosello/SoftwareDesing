@@ -1,5 +1,5 @@
 package enemies;
-public class TundraElf implements Elf {
+public class TundraElf extends Elf {
 	public TundraElf() {
 		// TODO Auto-generated constructor stub
 	}

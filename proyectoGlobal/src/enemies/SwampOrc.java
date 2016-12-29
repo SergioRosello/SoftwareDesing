@@ -1,7 +1,7 @@
 package enemies;
 
 
-public class SwampOrc implements Orc {
+public class SwampOrc extends Orc {
 
 	public SwampOrc(){
 		
