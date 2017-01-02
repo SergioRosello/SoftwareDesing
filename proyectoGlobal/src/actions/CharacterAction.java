@@ -1,11 +1,11 @@
 package actions;
 
 
-public abstract class EnemyAction {
+public abstract class CharacterAction {
 	//TODO: Change to int (this should be renamed)
 	protected abstract int quantity();
 	
-	public final void completeAction(){
+	public final void proceedWithAction(){
 		action();
 	}
 	

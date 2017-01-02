@@ -1,7 +1,7 @@
 package actions;
 
 
-public class Rest extends EnemyAction{
+public class Rest extends CharacterAction{
 
 	@Override
 	protected int quantity() {

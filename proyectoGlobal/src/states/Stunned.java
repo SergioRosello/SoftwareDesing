@@ -16,5 +16,11 @@ public class Stunned implements CharacterState {
 		if(character.isStunned()){
 			character.setCurrentState(character.getStunned());
 		}
+		else if(character.isDamaged()){
+			character.setCurrentState(character.getDamaged());
+		}
+		else{
+			character.setCurrentState(character.getNeutral());
+		}
 	}
 }

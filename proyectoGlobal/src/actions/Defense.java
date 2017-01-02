@@ -1,7 +1,7 @@
 package actions;
 
 
-public class Defense extends EnemyAction {
+public class Defense extends CharacterAction {
 
 	@Override
 	protected int quantity() {
