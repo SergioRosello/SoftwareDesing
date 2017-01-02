@@ -1,4 +1,4 @@
 package enemies;
-public abstract interface Human extends Enemy {
+public abstract class Human extends Enemy {
 	
 }

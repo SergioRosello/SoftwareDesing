@@ -1,4 +1,4 @@
 package enemies;
-public abstract interface Orc extends Enemy {
+public abstract class Orc extends Enemy {
 
 }

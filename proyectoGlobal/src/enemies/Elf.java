@@ -1,6 +1,6 @@
 package enemies;
 
 
-public abstract interface Elf extends Enemy {
+public abstract class Elf extends Enemy {
 
 }

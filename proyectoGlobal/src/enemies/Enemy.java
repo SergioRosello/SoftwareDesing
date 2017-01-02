@@ -1,6 +1,6 @@
 package enemies;
 import character.Character;
 
-public abstract interface Enemy extends Character{
+public abstract class Enemy extends Character{
 	
 }
