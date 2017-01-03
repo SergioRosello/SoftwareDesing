@@ -15,6 +15,17 @@ public abstract class CharacterAction {
 		removeStat();
 	};
 	
+	private final CharacterAction chooseAction(Character character){
+		if(character.getName() != "Player"){
+			//Hacer el random, tener en cuenta los rangos y stamina, elegir una acción.
+			//TODO: hace falta acabar esto
+			int randomAction = (int)Math.random() * 10;
+			if(randomAction >= 0 && randomAction < character.getAttackRange()) {
+				return null;
+			}
+		}
+		else return null;//Gestionar las entradas por consola del usuario. (el pleyer es libre de decidir estrategia)
+	}
 	public final void proceedWithAction(){
 		prepareAction();
 		action();
