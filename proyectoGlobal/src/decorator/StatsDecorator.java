@@ -3,5 +3,5 @@ import actions.*;
 
 public abstract class StatsDecorator extends CharacterAction {
 
-	protected abstract int quantity();
+	//protected abstract Character quantity();
 }
