@@ -1,6 +1,10 @@
 package enemies;
 public class TundraElf extends Elf {
 	public TundraElf() {
-		// TODO Auto-generated constructor stub
+		super();
+		this.setName("TundraElf");
+		
+		this.setAttackValue(this.getAttackValue() - 3);
+		this.setDefenseValue(this.getDefenseValue() + 3);
 	}
 }

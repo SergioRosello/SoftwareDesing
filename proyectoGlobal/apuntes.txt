@@ -1,0 +1,92 @@
+lógica:
+	-selector de arena
+	-selector de enemigo
+
+Player:
+	-Sistema de score
+
+
+los decorators
+	-Strong
+	-Neutral
+	-Weak 
+van a ir según la stamina, ataque y defensa consumen stamina y rest te la recupera.
+A la hora de atacar, la stamina baja 10 
+A la hora de defender, la stamina baja 5
+
+Rober tonto
+
+Elfo: 
+	Vida:	90
+	Ataque:	7
+	Defensa:13
+	Stamina:60
+
+			Elfo de Cienaga:
+					Vida:	
+					Ataque:
+					Defensa: -2
+					Stamina: +5
+
+			Elfo de Bosque
+					Vida:	 +10
+					Ataque:	 -2
+					Defensa:
+					Stamina:
+
+			Elfo de Tundra
+					Vida:	 
+					Ataque:	 -3
+					Defensa: +3
+					Stamina:
+Orco:
+	Vida:	110
+	Ataque:	15
+	Defensa:7
+	Stamina:40
+
+			Orco de Cienaga:
+					Vida:	
+					Ataque:
+					Defensa: -2
+					Stamina: +5
+
+			Orco de Bosque
+					Vida:	 +10
+					Ataque:	 -2
+					Defensa:
+					Stamina:
+
+			Orco de Tundra
+					Vida:	 
+					Ataque:	 -3
+					Defensa: +3
+					Stamina:
+	
+
+Humano:
+	Vida:	100
+	Ataque:	10
+	Defensa:10
+	Stamina:50
+
+
+			Humano de Cienaga:
+					Vida:	
+					Ataque:
+					Defensa: -2
+					Stamina: +5
+
+			Humano de Bosque
+					Vida:	 +10
+					Ataque:	 -2
+					Defensa:
+					Stamina:
+
+			Humano de Tundra
+					Vida:	 
+					Ataque:	 -3
+					Defensa: +3
+					Stamina:
+
+		
