@@ -23,7 +23,8 @@ public class Weak extends StatsDecorator {
 
 	@Override
 	protected Character removeStat() {
-		// TODO Auto-generated method stub
+		if(currentAction.toString() == "Attack") character.setAttackValue(character.getAttackValue() + 10);
+		else if(currentAction.toString() == "Defense") character.setDefenseValue(character.getDefenseValue() + 10);
 		return this.character;
 	}
 
@@ -37,6 +38,12 @@ public class Weak extends StatsDecorator {
 
 	@Override
 	protected void prepareAction() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void endAction() {
 		// TODO Auto-generated method stub
 		
 	}

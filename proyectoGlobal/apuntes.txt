@@ -16,6 +16,10 @@ A la hora de defender, la stamina baja 5
 
 Rober tonto
 
+
+prepareAction()
+	asignarla a 
+
 Elfo: 
 	Vida:	90
 	Ataque:	7

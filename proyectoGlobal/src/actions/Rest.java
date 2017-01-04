@@ -9,16 +9,25 @@ public class Rest extends CharacterAction{
 	}
 
 	@Override
+	protected void prepareAction() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
 	protected void action() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	protected void prepareAction() {
+	protected void endAction() {
 		// TODO Auto-generated method stub
-		
+		removeStat();
 	}
+	
+	
+	
 
 	//Estas dos clases no las vamos a usar en esta clase.
 	@Override

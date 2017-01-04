@@ -23,7 +23,7 @@ public class Normal extends StatsDecorator {
 	@Override
 	protected Character removeStat() {
 		// TODO Auto-generated method stub
-		return this.character;
+		return character;
 	}
 
 	
@@ -36,6 +36,12 @@ public class Normal extends StatsDecorator {
 
 	@Override
 	protected void prepareAction() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void endAction() {
 		// TODO Auto-generated method stub
 		
 	}
