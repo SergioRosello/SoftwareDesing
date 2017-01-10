@@ -8,9 +8,9 @@ import decorator.Weak;
 public class Attack extends CharacterAction {
 
 
-	Character character;
+	CharacterAction characterAction;
 	
-	 public Attack() {
+	public Attack() {
 		 proceedWithAction();
 	}
 	
@@ -22,7 +22,7 @@ public class Attack extends CharacterAction {
 		
 		//Fuerte
 		if(staminaValue <= staminaMaxValue && staminaValue >= (staminaMaxValue/3 * 2)){
-			character = new Strong(character);
+			attack = new Strong(attack);
 		}
 		//Normal
 		else if(staminaValue <= (staminaMaxValue/3 * 2) && staminaValue >= (staminaMaxValue/3)){
@@ -49,9 +49,9 @@ public class Attack extends CharacterAction {
 	
 	//Estos dos métodos no vamos a usarlos en esta clase.
 	@Override
-	protected Character quantity() {
+	public int quantity() {
 		// TODO Auto-generated method stub
-		return null;
+		return val;
 	}
 
 	@Override

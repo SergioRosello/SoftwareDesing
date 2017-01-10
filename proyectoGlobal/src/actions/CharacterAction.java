@@ -1,9 +1,12 @@
 package actions;
 import character.Character;
 
-public abstract class CharacterAction extends Character{
+public abstract class CharacterAction {
 	//TODO: Change to int (this should be renamed)
-	protected abstract Character quantity();
+	
+	public int val;
+	
+	public abstract int quantity();
 	
 	protected abstract Character removeStat();
 	

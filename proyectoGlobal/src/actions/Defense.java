@@ -10,7 +10,6 @@ public class Defense extends CharacterAction {
 	Character character;
 	CharacterAction currentAction;
 	
-	
 	public Defense(){
 		proceedWithAction();
 	}
@@ -49,9 +48,9 @@ public class Defense extends CharacterAction {
 	
 	//No vamos a usar estos dos métodos en esta clase.
 	@Override
-	protected Character quantity() {
+	public int quantity() {
 		// TODO Auto-generated method stub
-		return null;
+		return val;
 	}
 
 	@Override

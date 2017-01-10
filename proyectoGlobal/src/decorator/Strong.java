@@ -6,24 +6,20 @@ import character.Character;
 public class Strong extends StatsDecorator{
 
 	Character character;
-	CharacterAction currentAction;
 	
-	public Strong(Character character){
-		this.character = character;
-		this.currentAction = character.currentAction;
+	public Strong(CharacterAction characterAction){
+		this.characterAction = characterAction;
 	}
 	
 	@Override
-	protected Character quantity() {
-		if(currentAction.toString() == "Attack") character.setAttackValue(character.getAttackValue() + 10);
-		else if(currentAction.toString() == "Defense") character.setDefenseValue(character.getDefenseValue() + 10);
-		return character;
+	public int quantity() {
+		return characterAction.quantity();
 	}
 
 	@Override
 	protected Character removeStat() {
-		if(currentAction.toString() == "Attack") character.setAttackValue(character.getAttackValue() - 10);
-		else if(currentAction.toString() == "Defense") character.setDefenseValue(character.getDefenseValue() - 10);
+		if(characterAction.toString() == "Attack") character.setAttackValue(character.getAttackValue() - 10);
+		else if(characterAction.toString() == "Defense") character.setDefenseValue(character.getDefenseValue() - 10);
 		return character;
 	}
 	

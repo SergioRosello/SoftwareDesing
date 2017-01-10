@@ -31,9 +31,9 @@ public class Rest extends CharacterAction{
 
 	//Estas dos clases no las vamos a usar en esta clase.
 	@Override
-	protected Character quantity() {
+	public int quantity() {
 		// TODO Auto-generated method stub
-		return null;
+		return val;
 	}
 
 	@Override
