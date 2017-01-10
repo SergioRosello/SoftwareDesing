@@ -13,7 +13,7 @@ public abstract class Quicksort {
         quickSort(0, length - 1);
     }
  
-    protected void quickSort(int lowerIndex, int higherIndex) {
+    protected final void quickSort(int lowerIndex, int higherIndex) {
             
             int i = lowerIndex;
             int j = higherIndex;
