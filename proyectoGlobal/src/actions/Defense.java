@@ -1,9 +1,5 @@
 package actions;
-
 import character.Character;
-import decorator.Normal;
-import decorator.Strong;
-import decorator.Weak;
 
 public class Defense extends CharacterAction {
 

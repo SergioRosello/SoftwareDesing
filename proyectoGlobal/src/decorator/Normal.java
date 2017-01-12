@@ -1,7 +1,5 @@
 package decorator;
-
 import actions.CharacterAction;
-import character.Character;
 
 public class Normal extends StatsDecorator {
 

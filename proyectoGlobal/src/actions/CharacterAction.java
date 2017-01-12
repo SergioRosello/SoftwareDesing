@@ -1,5 +1,4 @@
 package actions;
-import character.Character;
 
 public abstract class CharacterAction {
 	//TODO: Change to int (this should be renamed)

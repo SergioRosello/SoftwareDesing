@@ -6,13 +6,13 @@ public class Attack extends CharacterAction {
 	CharacterAction characterAction;
 	
 	public Attack() {
+		
 	}
 	
 
 	
 	@Override
 	protected void action() {
-		// TODO Auto-generated method stub
 		
 	}
 

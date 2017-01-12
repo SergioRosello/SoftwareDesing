@@ -1,7 +1,5 @@
 package decorator;
-
 import actions.CharacterAction;
-import character.Character;
 
 public class Weak extends StatsDecorator {
 
@@ -11,7 +9,8 @@ public class Weak extends StatsDecorator {
 
 	@Override
 	public int quantity() {
-		return characterAction.quantity();
+		decoratorValue = 5;
+		return characterAction.quantity() - decoratorValue;
 	}
 
 	
