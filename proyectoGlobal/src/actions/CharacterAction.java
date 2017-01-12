@@ -8,21 +8,17 @@ public abstract class CharacterAction {
 	
 	public abstract int quantity();
 	
-	protected abstract Character removeStat();
+	//protected abstract Character removeStat();
 	
 	protected abstract void action();
 	
-	protected abstract void prepareAction();
+	//protected abstract void prepareAction();
 	
 	protected abstract void endAction();
 	
 	public final void proceedWithAction(){
-		//Comprobar el decorator que va a utilizar
-		prepareAction();
 		//Realizar el ataque
 		action();
-		//Quitar el decorator
-		//Quitar stamina
 		endAction();
 	}
 

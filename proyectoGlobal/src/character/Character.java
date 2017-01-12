@@ -1,5 +1,8 @@
 package character;
 import actions.CharacterAction;
+import decorator.Normal;
+import decorator.Strong;
+import decorator.Weak;
 import states.*;
 
 public abstract class Character {
@@ -47,7 +50,24 @@ public abstract class Character {
 	CharacterState Damaged;
 	CharacterState Stunned; 
 	
+	//Methods
+	protected void applyDecorator() {
+		//Fuerte
+		if(staminaValue <= staminaMaxValue && staminaValue >= (staminaMaxValue/3 * 2)){
+			currentAction = new Strong(currentAction);
+		}
+		//Normal
+		else if(staminaValue <= (staminaMaxValue/3 * 2) && staminaValue >= (staminaMaxValue/3)){
+			currentAction = new Normal(currentAction);
+		}
+		//Debil
+		else{
+			currentAction = new Weak(currentAction);
+		}
+	}
+	
 
+	//Getters and Setters
 	public String getName() 									{return name;}
 	public void setName(String name) 							{this.name = name;}
 	public int getHealthValue() 								{return healthValue;}
@@ -84,4 +104,6 @@ public abstract class Character {
 	public void setAttackRange(int attackRange) 				{this.attackRange = attackRange;}
 	public int getDefenseRange() 								{return defenseRange;}
 	public void setDefenseRange(int defenseRange) 				{this.defenseRange = defenseRange;}
+	
+	
 }

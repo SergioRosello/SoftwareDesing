@@ -21,15 +21,12 @@ public class Aggressive implements Strategy {
 			if (enemy.getStaminaValue() > 0) {
 				if (randomAction >= 0 && randomAction < enemy.getAttackRange()) {
 					enemy.currentAction = new Attack();
-					enemy.currentAction.proceedWithAction();
 				} else {
 					enemy.currentAction = new Defense();
-					enemy.currentAction.proceedWithAction();
 				} 
 			}
 			else {
 				enemy.currentAction = new Rest();
-				enemy.currentAction.proceedWithAction();
 			}
 	}
 }
