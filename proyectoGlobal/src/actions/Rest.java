@@ -1,17 +1,9 @@
 package actions;
 
-import character.Character;
 
 public class Rest extends CharacterAction{
 
 	public Rest(){
-		proceedWithAction();
-	}
-
-	@Override
-	protected void prepareAction() {
-		// TODO Auto-generated method stub
-		
 	}
 	
 	@Override
@@ -23,7 +15,6 @@ public class Rest extends CharacterAction{
 	@Override
 	protected void endAction() {
 		// TODO Auto-generated method stub
-		removeStat();
 	}
 	
 	
@@ -36,9 +27,4 @@ public class Rest extends CharacterAction{
 		return val;
 	}
 
-	@Override
-	protected Character removeStat() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

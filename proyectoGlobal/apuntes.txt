@@ -14,7 +14,16 @@ van a ir según la stamina, ataque y defensa consumen stamina y rest te la recupe
 A la hora de atacar, la stamina baja 10 
 A la hora de defender, la stamina baja 5
 
-Rober tonto
+Rober tonto y Ana tambien
+
+
+
+
+mover choseAction a characterAction
+characterAction se encarga de elejir la accion del enemigo
+hacer lo necesario para que funcione
+
+
 
 
 prepareAction()

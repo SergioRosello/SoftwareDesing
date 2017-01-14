@@ -20,4 +20,11 @@ public abstract class Enemy extends Character{
 		if(randomStrategy == 0) this.strategy = new Aggressive();
 		else this.strategy = new Defensive();
 	}
+	
+	protected void executeCurrentAction(){
+		strategy.chooseAction();
+		applyDecorator();
+	}
 }
+
+
