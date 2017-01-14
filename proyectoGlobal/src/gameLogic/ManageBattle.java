@@ -21,7 +21,7 @@ public class ManageBattle {
 	public ManageBattle(Player player) {
 		// TODO Auto-generated constructor stub
 		enemySpawn = new EnemySpawn();
-		calculator = new Calculator();
+		calculator = Calculator.getInstance();
 		this.player = player;
 		recursiveManageBattle();
 	}
