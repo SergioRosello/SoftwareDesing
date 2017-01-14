@@ -1,23 +1,28 @@
 package gameLogic;
 
-import java.util.Scanner;
+import character.Character;
+import player.Player;
 
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		//Mientras el player este vivo, ejecuta juego.
 		
 		
 		
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("You have 40 points!\nDistribute them as you wish");
-		System.out.println("You can assign points to your health, stamina, strength and defense");
-		System.out.println("How many points do you want to assign to your health? (each point counts as 10 HP)");
-		System.out.println(scanner.nextInt());
+		System.out.println("Welcome to the best game ever!");
+
+		Player player = new Player();
+		player.setPlayerValues();
 		
-		scanner.close();
+		System.out.println("\nPREPARE FOR BATTLE!\n");
+		ManageBattle manageBattle = new ManageBattle(player);
+	}
+	
+	public void showStats(Character character){
+		System.out.println(character.getAttackValue());
+		System.out.println(character.getDefenseValue());
+		System.out.println(character.getHealthValue());
+		System.out.println(character.getStaminaValue());
 	}
 
 }

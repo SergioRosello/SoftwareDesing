@@ -1,5 +1,8 @@
 package gameLogic;
 
+import enemies.Enemy;
+import player.Player;
+
 //Calculates attack results.
 public class Calculator {
 
@@ -11,5 +14,13 @@ public class Calculator {
 			return uniqueInstance;
 			}
 		return uniqueInstance;
+	}
+
+	public void manage(Player player, Enemy enemy) {
+		
+	}
+	
+	public void manage(Enemy enemy, Player player) {
+		
 	}
 }

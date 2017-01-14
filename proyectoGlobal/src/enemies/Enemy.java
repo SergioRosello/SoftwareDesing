@@ -21,7 +21,7 @@ public abstract class Enemy extends Character{
 		else this.strategy = new Defensive();
 	}
 	
-	protected void executeCurrentAction(){
+	public void executeCurrentAction(){
 		strategy.chooseAction();
 		applyDecorator();
 	}

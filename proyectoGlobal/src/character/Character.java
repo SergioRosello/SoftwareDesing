@@ -51,7 +51,7 @@ public abstract class Character {
 	CharacterState Stunned; 
 	
 	//Methods
-	protected void applyDecorator() {
+	public void applyDecorator() {
 		//Fuerte
 		if(staminaValue <= staminaMaxValue && staminaValue >= (staminaMaxValue/3 * 2)){
 			currentAction = new Strong(currentAction);

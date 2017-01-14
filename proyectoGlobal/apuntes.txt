@@ -14,10 +14,15 @@ van a ir según la stamina, ataque y defensa consumen stamina y rest te la recupe
 A la hora de atacar, la stamina baja 10 
 A la hora de defender, la stamina baja 5
 
-Rober tonto y Ana tambien
+Rober tonto y Ana tambien X2
 
+Es un juego por turnos. Primero realiza una acción uno de los dos personajes y despues el otro responde con otra. (Hasta que uno muere)
+Los estados se activan al recibir daño y dependen del decorator con el que te lo han hecho.
+Te recuperas de estar dañado al descansar
+Te recuperas de estar stunneado al pasar tu turno
 
-
+Si estás dañado, pierdes vida en cada turno. (probabilidad del 10% en normal y 5% en weak)
+Si estás estunneado, no puedes hacer nada (probabilidad del 10% solo cuando te atacan strong)
 
 mover choseAction a characterAction
 characterAction se encarga de elejir la accion del enemigo
