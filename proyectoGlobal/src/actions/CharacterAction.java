@@ -4,6 +4,8 @@ public abstract class CharacterAction {
 	//TODO: Change to int (this should be renamed)
 	
 	public int val;
+	public String action;
+	public String decorator;
 	
 	public abstract int quantity();
 	

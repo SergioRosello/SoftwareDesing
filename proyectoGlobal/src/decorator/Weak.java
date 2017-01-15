@@ -5,6 +5,8 @@ public class Weak extends StatsDecorator {
 
 	public Weak(CharacterAction characterAction) {
 		this.characterAction = characterAction;
+		this.action = characterAction.action;
+		this.decorator = "Weak";
 	}
 
 	@Override

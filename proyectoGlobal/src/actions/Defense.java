@@ -7,6 +7,8 @@ public class Defense extends CharacterAction {
 	CharacterAction currentAction;
 	
 	public Defense(){
+		this.action = "Defense";
+		this.decorator = "";
 	}
 	
 	@Override
@@ -25,7 +27,7 @@ public class Defense extends CharacterAction {
 	@Override
 	public int quantity() {
 		// TODO Auto-generated method stub
-		return val;
+		return 0;
 	}
 
 }

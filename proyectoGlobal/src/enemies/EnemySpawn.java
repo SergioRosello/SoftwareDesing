@@ -8,6 +8,7 @@ public class EnemySpawn {
 	private EnvirenomentSelection envirenomentSelection;
 	
 	public EnemySpawn(){
+		envirenomentSelection = new EnvirenomentSelection();
 		this.enemyFactory = envirenomentSelection.selectEnemyLocation();
 	}
 	
@@ -15,7 +16,7 @@ public class EnemySpawn {
 	public Enemy createEnemy(){
 		this.enemyFactory = envirenomentSelection.selectEnemyLocation();
 		//Genera un número aleatorio entre 0 y 2.
-		int randomEnemy = (int)Math.random() * 3;
+		int randomEnemy = (int)(Math.random() * (2 + 1));
 		if(randomEnemy == 0)return enemyFactory.createElf();
 		else if(randomEnemy == 1)return enemyFactory.createHuman();
 		else return enemyFactory.createOrc();

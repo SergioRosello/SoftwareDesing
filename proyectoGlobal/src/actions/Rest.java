@@ -4,6 +4,8 @@ package actions;
 public class Rest extends CharacterAction{
 
 	public Rest(){
+		this.action = "Rest";
+		this.decorator = "";
 	}
 	
 	@Override
@@ -24,7 +26,7 @@ public class Rest extends CharacterAction{
 	@Override
 	public int quantity() {
 		// TODO Auto-generated method stub
-		return val;
+		return 0;
 	}
 
 }

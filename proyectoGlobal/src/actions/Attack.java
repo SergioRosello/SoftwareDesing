@@ -6,7 +6,8 @@ public class Attack extends CharacterAction {
 	CharacterAction characterAction;
 	
 	public Attack() {
-		
+		this.action = "Attack";
+		this.decorator = "";
 	}
 	
 
@@ -26,6 +27,6 @@ public class Attack extends CharacterAction {
 	@Override
 	public int quantity() {
 		// TODO Auto-generated method stub
-		return val;
+		return 0;
 	}
 }

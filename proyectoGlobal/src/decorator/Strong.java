@@ -6,6 +6,8 @@ public class Strong extends StatsDecorator{
 	
 	public Strong(CharacterAction characterAction){
 		this.characterAction = characterAction;
+		this.action = characterAction.action;
+		this.decorator = "Strong";
 	}
 	
 	@Override

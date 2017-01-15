@@ -22,7 +22,7 @@ public abstract class Enemy extends Character{
 	}
 	
 	public void executeCurrentAction(){
-		strategy.chooseAction();
+		this.setCurrentAction(strategy.chooseAction(this.getStaminaValue()));
 		applyDecorator();
 	}
 }

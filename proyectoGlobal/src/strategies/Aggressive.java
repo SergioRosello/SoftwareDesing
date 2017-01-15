@@ -1,32 +1,27 @@
 package strategies;
 
 import actions.*;
-import enemies.Enemy;
 
-public class Aggressive implements Strategy {
+public class Aggressive extends Strategy {
 
-	Enemy enemy;
-	CharacterAction action;
 	public Aggressive() {
-		enemy.setAttackRange(7);
-		enemy.setDefenseRange(3);
+		attackRange = 7;
+		defenseRange = 3;
 	}
 	
 	@Override
-	public void chooseAction(){
-			//Hacer el random, tener en cuenta los rangos y stamina, elegir una acción.
-			//TODO: hace falta acabar esto
-			int randomAction = (int)Math.random() * 10;
+	public CharacterAction chooseAction(int stamina){
+		//Hacer el random, tener en cuenta los rangos y stamina, elegir una acción.
+		//TODO: hace falta acabar esto
+		int randomAction = (int)(Math.random() * (10 + 1));
+
+		
+		if (randomAction >= 0 && randomAction < attackRange && stamina >= 10) {
+			return new Attack();
+		} else if(stamina >= 5) {
+			return new Defense();
+		} 
+		else return new Rest();
 			
-			if (enemy.getStaminaValue() > 0) {
-				if (randomAction >= 0 && randomAction < enemy.getAttackRange()) {
-					enemy.currentAction = new Attack();
-				} else {
-					enemy.currentAction = new Defense();
-				} 
-			}
-			else {
-				enemy.currentAction = new Rest();
-			}
 	}
 }

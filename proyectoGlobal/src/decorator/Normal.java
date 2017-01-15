@@ -5,6 +5,8 @@ public class Normal extends StatsDecorator {
 
 	public Normal(CharacterAction characterAction){
 		this.characterAction = characterAction;
+		this.action = characterAction.action;
+		this.decorator = "Normal";
 	}
 	
 	//Como el decorator es "normal" no va a alterar las características del "character" 

@@ -5,12 +5,13 @@ import character.Character;
 
 public class Player extends Character{
 	int score = 0;
-	
+
 	public Player() {
 		resetStats();
 	}
 	
 	private void resetStats(){
+		setName("Player");
 		setHealthValue(10);
 		setHealthMaxValue(10);
 		setStaminaValue(10);
@@ -19,14 +20,13 @@ public class Player extends Character{
 		setDefenseValue(1);
 	}
 	
-	public void setPlayerValues(){
+	public void setPlayerValues(Scanner scanner){
 		int healthPoints;
 		int staminaPoints;
 		int strengthPoints;
 		int defensePoints;
 		boolean finalized = false;
 		boolean correctStats = false;
-		Scanner scanner = new Scanner(System.in);
 		while(!correctStats){
 			finalized = false;
 			resetStats();
@@ -84,8 +84,15 @@ public class Player extends Character{
 				correctStats = true;
 			}
 		}
-		scanner.close();
 	}
 
+	
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
 	
 }

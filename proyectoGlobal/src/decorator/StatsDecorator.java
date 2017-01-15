@@ -3,7 +3,7 @@ import actions.*;
 
 public abstract class StatsDecorator extends CharacterAction {
 
-	CharacterAction characterAction;
+	public CharacterAction characterAction;
 	
 	int decoratorValue;
 }

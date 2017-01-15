@@ -1,6 +1,10 @@
 package states;
 
 public interface CharacterState {
-
-	void handle();
+	
+	void setStunned();
+	
+	void setNeutral();
+	
+	void setDamaged();
 }

@@ -11,16 +11,17 @@ public class Neutral implements CharacterState {
 	}
 
 	@Override
-	public void handle() {
-		// TODO Auto-generated method stub
-		if(character.isStunned()){
-			character.setCurrentState(character.getStunned());
-		}
-		else if(character.isDamaged()){
-			character.setCurrentState(character.getDamaged());
-		}
-		else{
-			character.setCurrentState(character.getNeutral());
-		}
+	public void setStunned() {
+		character.setCurrentState(character.getCharacterStateStunned());
+	}
+
+	@Override
+	public void setNeutral() {
+		character.setCurrentState(character.getCharacterStateNeutral());
+	}
+
+	@Override
+	public void setDamaged() {
+		character.setCurrentState(character.getCharacterStateDamaged());
 	}
 }
