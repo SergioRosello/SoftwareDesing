@@ -1,7 +1,5 @@
 package gameLogic;
 
-import enemies.Enemy;
-import player.Player;
 import character.Character;
 
 //Calculates attack results.
@@ -17,63 +15,32 @@ public class Calculator {
 		return uniqueInstance;
 	}
 
-	//Gestiona la accion del player sobre el enemigo
-	public void manage(Player player, Enemy enemy) {
-		if(player.getCurrentAction().action.equals("Attack")){
+	//Gestiona la accion del active sobre el enemigo
+	public void manage(Character active, Character passive) {
+		if(active.getCurrentAction().action.equals("Attack")){
 			//Aquí eliminamos la stamina de la acción.
-			player.setStaminaValue(player.getStaminaValue() - 10);
+			active.setStaminaValue(active.getStaminaValue() - 10);
 			//Aquí se realiza el ataque
-			doAttack(player, enemy);
+			doAttack(active, passive);
 			//Aquí aplicamos los states
-			applyState(player, enemy);
+			applyState(active, passive);
 		}
-		else if(player.getCurrentAction().action.equals("Defense")){
+		else if(active.getCurrentAction().action.equals("Defense")){
 			//Aquí eliminamos la stamina de la acción.
-			player.setStaminaValue(player.getStaminaValue() - 5);
-			System.out.println(player.getName() + " is on guard!");
+			active.setStaminaValue(active.getStaminaValue() - 5);
+			System.out.println(active.getName() + " is on guard!");
 		}
-		else if(player.getCurrentAction().action.equals("Rest")){
-			//Aquí curamos al player, restauramos la stamina al valor máximo y seteamos el state a neutral.
-			if(player.getHealthValue() + 10 >= player.getHealthMaxValue()){
-				player.setHealthValue(player.getHealthMaxValue());
-			}else player.setHealthValue(player.getHealthValue() + 10);
-			player.setStaminaValue(player.getStaminaMaxValue());
-			player.currentState.setNeutral();
-			System.out.println(player.getName() + " has rested! state and stamina recovererd");
+		else if(active.getCurrentAction().action.equals("Rest")){
+			//Aquí curamos, restauramos la stamina al valor máximo y seteamos el state a neutral.
+			if(active.getHealthValue() + 10 >= active.getHealthMaxValue()){
+				active.setHealthValue(active.getHealthMaxValue());
+			}else active.setHealthValue(active.getHealthValue() + 10);
+			active.setStaminaValue(active.getStaminaMaxValue());
+			active.currentState.setNeutral();
+			System.out.println(active.getName() + " has rested! state and stamina recovererd");
 		}
-		
-		//Aquí quitamos la vida del enemigo si el estado es "Damaged"
-		applyDamagedState(enemy,  player);
-	}
-	
-	//Sobrecarga del método superior
-	//Gestiona la accion del enemigo sobre el player
-	public void manage(Enemy enemy, Player player) {
-		if(enemy.getCurrentAction().action.equals("Attack")){
-			//Aquí eliminamos la stamina de la acción.
-			enemy.setStaminaValue(enemy.getStaminaValue() - 10);
-			//Aquí se realiza el ataque
-			doAttack(enemy, player);
-			//Aquí aplicamos los states
-			applyState(enemy, player);
-		}
-		else if(enemy.getCurrentAction().action.equals("Defense")){
-			//Aquí eliminamos la stamina de la acción.
-			enemy.setStaminaValue(enemy.getStaminaValue() - 5);
-			System.out.println(enemy.getName() + " is on guard!");
-		}
-		else if(enemy.getCurrentAction().action.equals("Rest")){
-			//Aquí curamos al enemy, restauramos la stamina al valor máximo y seteamos el state a neutral.
-			if(enemy.getHealthValue() + 10 >= enemy.getHealthMaxValue()){
-				enemy.setHealthValue(enemy.getHealthMaxValue());
-			}else enemy.setHealthValue(enemy.getHealthValue() + 10);
-			enemy.setStaminaValue(enemy.getStaminaMaxValue());
-			enemy.currentState.setNeutral();
-			System.out.println(enemy.getName() + " has rested! state and stamina recovererd");
-		}
-		
-		//Aquí quitamos la vida del enemigo si el estado es "Damaged"
-		applyDamagedState(enemy,  player);
+		//Aquí quitamos la vida a los personajes si el estado es "Damaged"
+		applyDamagedState(passive,  active);
 	}
 	
 	private void applyState(Character character, Character character2){
@@ -112,7 +79,7 @@ public class Calculator {
 							character.getStaminaValue() + " of "  + character.getStaminaMaxValue() + " SP left.");
 		System.out.println(character2.getName() + " has " + character2.getHealthValue() + " of "  + character2.getHealthMaxValue() + " HP left and " +
 				character2.getStaminaValue() + " of "  + character2.getStaminaMaxValue() + " SP left.");
-		System.out.println("--------------------------------");
+		System.out.println("--------------------------------\n");
 	}
 
 	private void doAttack(Character character, Character character2){
@@ -134,6 +101,5 @@ public class Calculator {
 			character2.setHealthValue(character2.getHealthValue() - damage);
 		}
 		System.out.println(character.getName() + " has dealt " + character2.getName() + " a " + damage + " damage " + character.getCurrentAction().decorator + " attack");
-		
 	}
 }

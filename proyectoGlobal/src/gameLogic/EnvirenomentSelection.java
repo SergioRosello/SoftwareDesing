@@ -12,7 +12,6 @@ public class EnvirenomentSelection {
 		if(randomEnemyLocation == 0)enemyFactory = new ForestEnemyFactory();
 		else if(randomEnemyLocation == 1) enemyFactory = new TundraEnemyFactory();
 		else enemyFactory = new SwampEnemyFactory();
-		
 		return enemyFactory;
 	}
 }

@@ -6,7 +6,6 @@ public class Damaged implements CharacterState {
 	Character character;
 	
 	public Damaged(Character character) {
-		// TODO Auto-generated constructor stub
 		this.character = character;
 	}
 

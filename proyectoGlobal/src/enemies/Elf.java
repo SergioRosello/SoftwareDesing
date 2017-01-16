@@ -12,6 +12,4 @@ public abstract class Elf extends Enemy {
 		this.setStaminaValue(60);
 		this.setStaminaMaxValue(60);
 	}
-	
-
 }

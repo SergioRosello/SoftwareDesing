@@ -21,8 +21,6 @@ public abstract class Character {
 		damaged = new Damaged(this);
 		currentState = neutral;
 		currentAction = new Rest();
-		attackRange = 5;
-		defenseRange = 5;
 	}
 
 	//Common variables
@@ -34,11 +32,6 @@ public abstract class Character {
 	int staminaValue;
 	int staminaMaxValue;	//To prevent the character from having more stamina that it starts with.
 	
-	//Para poder elejir el comportamiento del enemigo
-	//según una estrategia, tenemos que tener un rango
-	//El rango completo va a ser de 10
-	int attackRange;
-	int defenseRange;
 
 	public CharacterState currentState;
 	public CharacterAction currentAction;
@@ -64,12 +57,17 @@ public abstract class Character {
 		}
 	}
 	
+	//Ejecuta la acción actual del Character.
+	public abstract void executeCurrentAction();
+	
 
 	//Getters and Setters
 	public String getName() 									{return name;}
 	public void setName(String name) 							{this.name = name;}
 	public int getHealthValue() 								{return healthValue;}
 	public void setHealthValue(int healthValue) 				{this.healthValue = healthValue;}
+	public int getHealthMaxValue() 								{return healthMaxValue;}
+	public void setHealthMaxValue(int healthMaxValue) 			{this.healthMaxValue = healthMaxValue;}
 	public int getAttackValue() 								{return attackValue;}
 	public void setAttackValue(int attackValue) 				{this.attackValue = attackValue;}
 	public int getDefenseValue() 								{return defenseValue;}
@@ -83,14 +81,6 @@ public abstract class Character {
 	public CharacterState getCharacterStateStunned() 			{return stunned;}
 	public CharacterState getCharacterStateNeutral() 			{return neutral;}
 	public CharacterState getCharacterStateDamaged() 			{return damaged;}
-	public int getHealthMaxValue() 								{return healthMaxValue;}
-	public void setHealthMaxValue(int healthMaxValue) 			{this.healthMaxValue = healthMaxValue;}
 	public CharacterAction getCurrentAction() 					{return currentAction;}
 	public void setCurrentAction(CharacterAction currentAction) {this.currentAction = currentAction;}
-	public int getAttackRange() 								{return attackRange;}
-	public void setAttackRange(int attackRange) 				{this.attackRange = attackRange;}
-	public int getDefenseRange() 								{return defenseRange;}
-	public void setDefenseRange(int defenseRange) 				{this.defenseRange = defenseRange;}
-	
-	
 }

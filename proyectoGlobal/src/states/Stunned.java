@@ -6,7 +6,6 @@ public class Stunned implements CharacterState {
 	Character character;
 	
 	public Stunned(Character character) {
-		// TODO Auto-generated constructor stub
 		this.character = character;
 	}
 
