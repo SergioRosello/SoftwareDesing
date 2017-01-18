@@ -16,6 +16,9 @@ public abstract class Character {
 		defenseValue = 0;
 		staminaValue = 0;
 		staminaMaxValue = 0;
+		isStunned = false;
+		isDamaged = false;
+		isNeutral = true;
 		stunned = new Stunned(this);
 		neutral = new Neutral(this);
 		damaged = new Damaged(this);
@@ -30,7 +33,12 @@ public abstract class Character {
 	int attackValue;
 	int defenseValue;
 	int staminaValue;
-	int staminaMaxValue;	//To prevent the character from having more stamina that it starts with.
+	int staminaMaxValue;	//To prevent the character from having more stamina that it starts with. isStunned;
+
+	//Booleans for state management
+	boolean isNeutral;
+	boolean isDamaged;
+	boolean isStunned;
 	
 
 	public CharacterState currentState;
@@ -83,4 +91,10 @@ public abstract class Character {
 	public CharacterState getCharacterStateDamaged() 			{return damaged;}
 	public CharacterAction getCurrentAction() 					{return currentAction;}
 	public void setCurrentAction(CharacterAction currentAction) {this.currentAction = currentAction;}
+	public boolean isNeutral() 									{return isNeutral;}
+	public void setNeutral(boolean isNeutral) 					{this.isNeutral = isNeutral;}
+	public boolean isDamaged() 									{return isDamaged;}
+	public void setDamaged(boolean isDamaged) 					{this.isDamaged = isDamaged;}
+	public boolean isStunned() 									{return isStunned;}
+	public void setStunned(boolean isStunned) 					{this.isStunned = isStunned;}
 }

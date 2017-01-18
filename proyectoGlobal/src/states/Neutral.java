@@ -9,18 +9,25 @@ public class Neutral implements CharacterState {
 		this.character = character;
 	}
 
-	@Override
-	public void setStunned() {
+	private void setStunned() {
 		character.setCurrentState(character.getCharacterStateStunned());
+		character.setNeutral(false);
+		character.setDamaged(false);
 	}
 
-	@Override
-	public void setNeutral() {
-		character.setCurrentState(character.getCharacterStateNeutral());
-	}
-
-	@Override
-	public void setDamaged() {
+	private void setDamaged() {
 		character.setCurrentState(character.getCharacterStateDamaged());
+		character.setNeutral(false);
+		character.setStunned(false);
 	}
+
+	@Override
+	public void handle() {
+		if(character.isDamaged()){
+			setDamaged();
+		}else if(character.isStunned()){
+			setStunned();
+		}
+	}
+	
 }

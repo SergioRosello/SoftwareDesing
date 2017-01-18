@@ -62,7 +62,8 @@ public class BattleManager {
 		}else {
 			//Si el character está stuneado, no puede hacer nada y vuelve a su estado neutral.
 			System.out.println(turno.getName() + " is stunned and cant do anything this turn");
-			turno.getCurrentState().setNeutral();
+			character.setNeutral(true);
+			turno.getCurrentState().handle();
 		}
 		
 		//Re-asignamos el turno a quien le toque

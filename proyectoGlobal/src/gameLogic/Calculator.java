@@ -36,7 +36,8 @@ public class Calculator {
 				active.setHealthValue(active.getHealthMaxValue());
 			}else active.setHealthValue(active.getHealthValue() + 10);
 			active.setStaminaValue(active.getStaminaMaxValue());
-			active.currentState.setNeutral();
+			active.setNeutral(true);
+			active.getCurrentState().handle();
 			System.out.println(active.getName() + " has rested! state and stamina recovererd");
 		}
 		//Aquí quitamos la vida a los personajes si el estado es "Damaged"
@@ -47,24 +48,24 @@ public class Calculator {
 		if(character.getCurrentAction().decorator.equals("Strong")){
 			int probability = (int) (Math.random() *(10 + 1));
 			if(probability >= 0 && probability <= 1){
-				character2.getCurrentState().setStunned();
+				character2.setStunned(true);
 				System.out.println(character.getName() + " has stunned " + character2.getName() + " !");
 			}
 		}
 		else if(character.getCurrentAction().decorator.equals("Normal")){
 			int probability = (int) (Math.random() *(10 + 1));
 			if(probability >= 0 && probability <= 1){
-				character2.getCurrentState().setDamaged();
+				character2.setDamaged(true);
 				System.out.println(character.getName() + " has damaged " + character2.getName() + " !");
 			}
 		}else{
 			int probability = (int) (Math.random() *(100 + 1));
 			if(probability >= 0 && probability <= 5){
-				character2.getCurrentState().setDamaged();
+				character2.setDamaged(true);
 				System.out.println(character.getName() + " has damaged " + character2.getName() + " !");
 			}
 		}
-		
+		character2.getCurrentState().handle();
 	}
 
 	private void applyDamagedState(Character character, Character character2){

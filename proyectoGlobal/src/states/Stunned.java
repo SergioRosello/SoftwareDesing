@@ -8,19 +8,25 @@ public class Stunned implements CharacterState {
 	public Stunned(Character character) {
 		this.character = character;
 	}
-
-	@Override
-	public void setStunned() {
-		character.setCurrentState(character.getCharacterStateStunned());
-	}
-
-	@Override
-	public void setNeutral() {
+	
+	private void setNeutral() {
 		character.setCurrentState(character.getCharacterStateNeutral());
+		character.setStunned(false);
+		character.setDamaged(false);
+	}
+
+	private void setDamaged() {
+		character.setCurrentState(character.getCharacterStateDamaged());
+		character.setNeutral(false);
+		character.setStunned(false);
 	}
 
 	@Override
-	public void setDamaged() {
-		character.setCurrentState(character.getCharacterStateDamaged());
+	public void handle() {
+		if(character.isDamaged()){
+			setDamaged();
+		}else if(character.isNeutral()){
+			setNeutral();
+		}
 	}
 }
